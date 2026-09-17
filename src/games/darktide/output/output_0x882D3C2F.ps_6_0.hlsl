@@ -32,6 +32,7 @@ float4 main(noperspective float4 SV_Position : SV_Position,
   SV_Target.z = (saturate((_38 + (exp2(((log2((_9.z))) * _41))))));
   SV_Target.w = (_9.w);
   
-  SV_Target.rgb = _9.rgb;
+  // SV_Target.rgb = _9.rgb;
+  SV_Target = renodx::draw::SwapChainPass(_9);
   return SV_Target;
 }
